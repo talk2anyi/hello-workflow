@@ -20,7 +20,7 @@ spec:
           ports:
             - containerPort: 7233
               name: grpc
-            - containerPort: 8088
+            - containerPort: 8080
               name: http
 ---
 apiVersion: v1
@@ -36,5 +36,5 @@ spec:
       port: 7233
       targetPort: grpc
     - name: http
-      port: 8088
+      port: 8080
       targetPort: http
