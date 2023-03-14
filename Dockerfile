@@ -8,8 +8,8 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY ./starter ./starter
-COPY ./worker ./worker
+COPY ./starter/ ./starter/
+COPY ./worker/ ./worker/
 COPY . .
 
 RUN go build -o ./
