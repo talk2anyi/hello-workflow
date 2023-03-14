@@ -10,7 +10,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /hello-workflow
+RUN go build -o .
 
 EXPOSE 8080 7233
 
