@@ -5,14 +5,15 @@ FROM golang:1.16-alpine
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY go.sum ./
+COPY go.mod go.sum ./
 RUN go mod download
 
-COPY *.go ./
+COPY . .
 
 RUN go build -o /hello-workflow
 
-EXPOSE 8088 7233
+EXPOSE 8080 7233
 
-CMD [ "/hello-workflow" ]
+CMD [ "./worker/main.go" "./starter/main.go" ]
+
+
