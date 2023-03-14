@@ -12,7 +12,7 @@ COPY ./starter/ ./starter/
 COPY ./worker/ ./worker/
 COPY . .
 
-RUN go build -o ./
+RUN go build -o ./starter/ ./worker/
 
 EXPOSE 8080 7233
 
