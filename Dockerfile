@@ -8,9 +8,11 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
+COPY ./starter ./starter
+COPY ./worker ./worker
 COPY . .
 
-RUN go build -o ./starter
+RUN go build -o ./
 
 EXPOSE 8080 7233
 
