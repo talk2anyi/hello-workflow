@@ -10,7 +10,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /starter
+RUN go build -o ./starter
 
 EXPOSE 8080 7233
 
